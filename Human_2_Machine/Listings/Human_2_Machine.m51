@@ -1,0 +1,277 @@
+BL51 BANKED LINKER/LOCATER V6.22.2.0                                                    06/16/2022  00:08:38  PAGE 1
+
+
+BL51 BANKED LINKER/LOCATER V6.22.2.0, INVOKED BY:
+E:\SOFTWARES\KEIL\MDK\C51\BIN\BL51.EXE .\Objects\main.obj, .\Objects\KeyScan.obj, .\Objects\OLED_GUI.obj TO .\Objects\Hu
+>> man_2_Machine PRINT (.\Listings\Human_2_Machine.m51) RAMSIZE (256)
+
+
+MEMORY MODEL: SMALL
+
+
+INPUT MODULES INCLUDED:
+  .\Objects\main.obj (MAIN)
+  .\Objects\KeyScan.obj (KEYSCAN)
+  .\Objects\OLED_GUI.obj (OLED_GUI)
+  E:\SOFTWARES\KEIL\MDK\C51\LIB\C51S.LIB (?C_STARTUP)
+  E:\SOFTWARES\KEIL\MDK\C51\LIB\C51S.LIB (?C?CILDPTR)
+  E:\SOFTWARES\KEIL\MDK\C51\LIB\C51S.LIB (?C?CSTPTR)
+  E:\SOFTWARES\KEIL\MDK\C51\LIB\C51S.LIB (?C?IMUL)
+  E:\SOFTWARES\KEIL\MDK\C51\LIB\C51S.LIB (?C?UIDIV)
+  E:\SOFTWARES\KEIL\MDK\C51\LIB\C51S.LIB (?C?ISTPTR)
+  E:\SOFTWARES\KEIL\MDK\C51\LIB\C51S.LIB (?C_INIT)
+
+
+LINK MAP OF MODULE:  .\Objects\Human_2_Machine (MAIN)
+
+
+            TYPE    BASE      LENGTH    RELOCATION   SEGMENT NAME
+            -----------------------------------------------------
+
+            * * * * * * *   D A T A   M E M O R Y   * * * * * * *
+            REG     0000H     0008H     ABSOLUTE     "REG BANK 0"
+            DATA    0008H     0013H     UNIT         ?DT?MAIN
+            DATA    001BH     0009H     UNIT         _DATA_GROUP_
+            IDATA   0024H     0001H     UNIT         ?STACK
+
+            * * * * * * *   C O D E   M E M O R Y   * * * * * * *
+            CODE    0000H     0003H     ABSOLUTE     
+            CODE    0003H     0104H     UNIT         ?PR?_WEIGHT_SET_VALUE_CHANGE?OLED_GUI
+            CODE    0107H     00BAH     UNIT         ?C?LIB_CODE
+            CODE    01C1H     00A0H     UNIT         ?PR?RENEW_WEIGHT_SET_VALUE?OLED_GUI
+            CODE    0261H     008CH     UNIT         ?C_C51STARTUP
+            CODE    02EDH     003CH     UNIT         ?PR?SET_NO_RENEW?OLED_GUI
+            CODE    0329H     002FH     UNIT         ?PR?MAIN?MAIN
+            CODE    0358H     0005H     UNIT         ?C_INITSEG
+            CODE    035DH     0001H     UNIT         ?PR?KEY_SCAN?KEYSCAN
+
+
+
+OVERLAY MAP OF MODULE:   .\Objects\Human_2_Machine (MAIN)
+
+
+SEGMENT                                         DATA_GROUP 
+  +--> CALLED SEGMENT                         START    LENGTH
+-------------------------------------------------------------
+?C_C51STARTUP                                 -----    -----
+  +--> ?PR?MAIN?MAIN
+  +--> ?C_INITSEG
+
+?PR?MAIN?MAIN                                 -----    -----
+  +--> ?PR?RENEW_WEIGHT_SET_VALUE?OLED_GUI
+BL51 BANKED LINKER/LOCATER V6.22.2.0                                                  06/16/2022  00:08:38  PAGE 2
+
+
+  +--> ?PR?SET_NO_RENEW?OLED_GUI
+
+?PR?RENEW_WEIGHT_SET_VALUE?OLED_GUI           -----    -----
+  +--> ?PR?_WEIGHT_SET_VALUE_CHANGE?OLED_GUI
+
+?PR?_WEIGHT_SET_VALUE_CHANGE?OLED_GUI         001BH    0009H
+
+
+
+SYMBOL TABLE OF MODULE:  .\Objects\Human_2_Machine (MAIN)
+
+  VALUE           TYPE          NAME
+  ----------------------------------
+
+  -------         MODULE        MAIN
+  C:0000H         SYMBOL        _ICE_DUMMY_
+  D:0008H         PUBLIC        Key_Down_Flag
+  D:0009H         PUBLIC        Key_0_Flag
+  D:000AH         PUBLIC        Key_1_Flag
+  D:000BH         PUBLIC        Key_2_Flag
+  D:000CH         PUBLIC        Key_3_Flag
+  D:000DH         PUBLIC        Key_4_Flag
+  D:000EH         PUBLIC        Key_5_Flag
+  D:000FH         PUBLIC        Key_6_Flag
+  D:0010H         PUBLIC        Key_7_Flag
+  D:0011H         PUBLIC        Key_8_Flag
+  D:0012H         PUBLIC        Key_9_Flag
+  C:0329H         PUBLIC        main
+  D:0013H         PUBLIC        Key_Up_Flag
+  D:0014H         PUBLIC        Key_Confirm_Flag
+  D:0015H         PUBLIC        Key_Setting_Flag
+  D:0016H         PUBLIC        Set_No
+  D:0017H         PUBLIC        Key_Right_Flag
+  D:0018H         PUBLIC        Key_Left_Flag
+  D:0019H         PUBLIC        Weight_Set
+  -------         PROC          MAIN
+  C:0329H         LINE#         15
+  C:0329H         LINE#         16
+  C:0329H         LINE#         18
+  C:032FH         LINE#         19
+  C:0332H         LINE#         22
+  C:0335H         LINE#         23
+  C:0338H         LINE#         24
+  C:033BH         LINE#         25
+  C:033EH         LINE#         28
+  C:0341H         LINE#         29
+  C:0344H         LINE#         30
+  C:0347H         LINE#         31
+  C:034AH         LINE#         34
+  C:034DH         LINE#         35
+  C:0350H         LINE#         36
+  C:0353H         LINE#         37
+  C:0356H         LINE#         40
+  -------         ENDPROC       MAIN
+  -------         ENDMOD        MAIN
+
+  -------         MODULE        KEYSCAN
+BL51 BANKED LINKER/LOCATER V6.22.2.0                                                  06/16/2022  00:08:38  PAGE 3
+
+
+  C:0000H         SYMBOL        _ICE_DUMMY_
+  C:035DH         PUBLIC        Key_Scan
+  -------         PROC          KEY_SCAN
+  C:035DH         LINE#         3
+  C:035DH         LINE#         4
+  C:035DH         LINE#         6
+  -------         ENDPROC       KEY_SCAN
+  -------         ENDMOD        KEYSCAN
+
+  -------         MODULE        OLED_GUI
+  C:0000H         SYMBOL        _ICE_DUMMY_
+  C:0003H         PUBLIC        _Weight_Set_Value_Change
+  C:02EDH         PUBLIC        Set_No_Renew
+  C:01C1H         PUBLIC        Renew_Weight_Set_Value
+  -------         PROC          _WEIGHT_SET_VALUE_CHANGE
+  D:001BH         SYMBOL        num
+  D:001CH         SYMBOL        value
+  -------         DO            
+  D:001DH         SYMBOL        GeWei
+  D:001EH         SYMBOL        ShiWei
+  D:001FH         SYMBOL        BaiWei
+  D:0020H         SYMBOL        QianWei
+  D:0021H         SYMBOL        p
+  -------         ENDDO         
+  C:0003H         LINE#         14
+  C:0007H         LINE#         15
+  C:0007H         LINE#         18
+  C:0010H         LINE#         20
+  C:0024H         LINE#         21
+  C:0038H         LINE#         22
+  C:004CH         LINE#         23
+  C:0059H         LINE#         25
+  C:006CH         LINE#         26
+  C:006CH         LINE#         27
+  C:007FH         LINE#         28
+  C:009EH         LINE#         29
+  C:00CCH         LINE#         30
+  C:0106H         LINE#         31
+  C:0106H         LINE#         32
+  -------         ENDPROC       _WEIGHT_SET_VALUE_CHANGE
+  -------         PROC          RENEW_WEIGHT_SET_VALUE
+  C:01C1H         LINE#         34
+  C:01C1H         LINE#         35
+  C:01C1H         LINE#         36
+  C:01C7H         LINE#         37
+  C:01C7H         LINE#         38
+  C:01CDH         LINE#         39
+  C:01D0H         LINE#         40
+  C:01D0H         LINE#         41
+  C:01D6H         LINE#         42
+  C:01D6H         LINE#         43
+  C:01DDH         LINE#         44
+  C:01E0H         LINE#         45
+  C:01E0H         LINE#         46
+  C:01E6H         LINE#         47
+  C:01E6H         LINE#         48
+  C:01EDH         LINE#         49
+BL51 BANKED LINKER/LOCATER V6.22.2.0                                                  06/16/2022  00:08:38  PAGE 4
+
+
+  C:01F0H         LINE#         50
+  C:01F0H         LINE#         51
+  C:01F6H         LINE#         52
+  C:01F6H         LINE#         53
+  C:01FDH         LINE#         54
+  C:0200H         LINE#         55
+  C:0200H         LINE#         56
+  C:0206H         LINE#         57
+  C:0206H         LINE#         58
+  C:020DH         LINE#         59
+  C:0210H         LINE#         60
+  C:0210H         LINE#         61
+  C:0216H         LINE#         62
+  C:0216H         LINE#         63
+  C:021DH         LINE#         64
+  C:0220H         LINE#         65
+  C:0220H         LINE#         66
+  C:0226H         LINE#         67
+  C:0226H         LINE#         68
+  C:022DH         LINE#         69
+  C:0230H         LINE#         70
+  C:0230H         LINE#         71
+  C:0236H         LINE#         72
+  C:0236H         LINE#         73
+  C:023DH         LINE#         74
+  C:0240H         LINE#         75
+  C:0240H         LINE#         76
+  C:0246H         LINE#         77
+  C:0246H         LINE#         78
+  C:024DH         LINE#         79
+  C:0250H         LINE#         80
+  C:0250H         LINE#         81
+  C:0256H         LINE#         82
+  C:0256H         LINE#         83
+  C:025DH         LINE#         84
+  C:0260H         LINE#         85
+  C:0260H         LINE#         86
+  -------         ENDPROC       RENEW_WEIGHT_SET_VALUE
+  -------         PROC          SET_NO_RENEW
+  -------         DO            
+  D:0001H         SYMBOL        t
+  -------         ENDDO         
+  C:02EDH         LINE#         88
+  C:02EDH         LINE#         89
+  C:02EDH         LINE#         90
+  C:02F3H         LINE#         92
+  C:02F9H         LINE#         93
+  C:02F9H         LINE#         94
+  C:02FFH         LINE#         95
+  C:02FFH         LINE#         96
+  C:0304H         LINE#         97
+  C:030BH         LINE#         98
+  C:030EH         LINE#         99
+  C:030EH         LINE#         101
+  C:0314H         LINE#         102
+  C:0314H         LINE#         103
+  C:031AH         LINE#         104
+BL51 BANKED LINKER/LOCATER V6.22.2.0                                                  06/16/2022  00:08:38  PAGE 5
+
+
+  C:031AH         LINE#         105
+  C:031EH         LINE#         106
+  C:0325H         LINE#         107
+  C:0328H         LINE#         108
+  C:0328H         LINE#         110
+  -------         ENDPROC       SET_NO_RENEW
+  -------         ENDMOD        OLED_GUI
+
+  -------         MODULE        ?C?CILDPTR
+  C:0107H         PUBLIC        ?C?CILDPTR
+  -------         ENDMOD        ?C?CILDPTR
+
+  -------         MODULE        ?C?CSTPTR
+  C:0129H         PUBLIC        ?C?CSTPTR
+  -------         ENDMOD        ?C?CSTPTR
+
+  -------         MODULE        ?C?IMUL
+  C:013BH         PUBLIC        ?C?IMUL
+  -------         ENDMOD        ?C?IMUL
+
+  -------         MODULE        ?C?UIDIV
+  C:014DH         PUBLIC        ?C?UIDIV
+  -------         ENDMOD        ?C?UIDIV
+
+  -------         MODULE        ?C?ISTPTR
+  C:01A2H         PUBLIC        ?C?ISTPTR
+  -------         ENDMOD        ?C?ISTPTR
+
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?KEY_SCAN?KEYSCAN
+
+Program Size: data=37.0 xdata=0 code=862
+LINK/LOCATE RUN COMPLETE.  1 WARNING(S),  0 ERROR(S)

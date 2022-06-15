@@ -1,0 +1,65 @@
+C51 COMPILER V9.60.0.0   MAIN                                                              06/16/2022 00:08:38 PAGE 1   
+
+
+C51 COMPILER V9.60.0.0, COMPILATION OF MODULE MAIN
+OBJECT MODULE PLACED IN .\Objects\main.obj
+COMPILER INVOKED BY: E:\Softwares\Keil\MDK\C51\BIN\C51.EXE User\main.c OPTIMIZE(8,SPEED) BROWSE INCDIR(.\Hardware\h) DEB
+                    -UG OBJECTEXTEND PRINT(.\Listings\main.lst) OBJECT(.\Objects\main.obj)
+
+line level    source
+
+   1          #include <stdio.h>
+   2          #include <OLED_GUI.h>
+   3          
+   4          unsigned int Weight_Set = 1234;
+   5          unsigned char Set_No;
+   6          unsigned char Key_0_Flag; unsigned char Key_1_Flag;
+   7          unsigned char Key_2_Flag; unsigned char Key_3_Flag;
+   8          unsigned char Key_4_Flag; unsigned char Key_5_Flag;
+   9          unsigned char Key_6_Flag; unsigned char Key_7_Flag;
+  10          unsigned char Key_8_Flag; unsigned char Key_9_Flag;
+  11          unsigned char Key_Left_Flag; unsigned char Key_Right_Flag;
+  12          unsigned char Key_Confirm_Flag; unsigned char Key_Setting_Flag;
+  13          unsigned char Key_Up_Flag; unsigned char Key_Down_Flag;
+  14          
+  15          int main(void) 
+  16          {
+  17   1      //    printf("Input is:%4d\n", Weight_Set);
+  18   1          Set_No = 3; Key_9_Flag = 1;
+  19   1          Renew_Weight_Set_Value();
+  20   1      //    printf("Output is:%4d\n", Weight_Set);
+  21   1          
+  22   1          Key_Left_Flag = 1;
+  23   1          Key_9_Flag = 1;
+  24   1          Set_No_Renew();
+  25   1          Renew_Weight_Set_Value();
+  26   1      //    printf("Output is:%4d\n", Weight_Set);
+  27   1          
+  28   1          Key_Left_Flag = 1;
+  29   1          Key_9_Flag = 1;
+  30   1          Set_No_Renew();
+  31   1          Renew_Weight_Set_Value();
+  32   1      //    printf("Output is:%4d\n", Weight_Set);
+  33   1          
+  34   1          Key_Left_Flag = 1;
+  35   1          Key_9_Flag = 1;
+  36   1          Set_No_Renew();
+  37   1          Renew_Weight_Set_Value();
+  38   1      //    printf("Output is:%4d\n", Weight_Set);
+  39   1          
+  40   1          while(1);
+  41   1      }
+
+
+MODULE INFORMATION:   STATIC OVERLAYABLE
+   CODE SIZE        =     47    ----
+   CONSTANT SIZE    =   ----    ----
+   XDATA SIZE       =   ----    ----
+   PDATA SIZE       =   ----    ----
+   DATA SIZE        =     19    ----
+   IDATA SIZE       =   ----    ----
+   BIT SIZE         =   ----    ----
+END OF MODULE INFORMATION.
+
+
+C51 COMPILATION COMPLETE.  0 WARNING(S),  0 ERROR(S)

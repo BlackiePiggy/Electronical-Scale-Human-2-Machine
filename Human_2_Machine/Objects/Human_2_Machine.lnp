@@ -1,0 +1,5 @@
+".\Objects\main.obj",
+".\Objects\KeyScan.obj",
+".\Objects\OLED_GUI.obj" 
+TO ".\Objects\Human_2_Machine" 
+PRINT(".\Listings\Human_2_Machine.m51") RAMSIZE(256) 
